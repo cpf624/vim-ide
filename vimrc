@@ -45,6 +45,9 @@ Plugin 'fatih/vim-go'
 " Plugin 'godlygeek/tabular'
 " Plugin 'plasticboy/vim-markdown'
 
+" vue plugins
+Plugin 'posva/vim-vue'
+
 call vundle#end()
 " END CONFIG FOR VUNDLE
 
@@ -57,6 +60,8 @@ set tabstop=4
 set shiftwidth=4
 set softtabstop=4
 
+autocmd BufNewFile,BufRead *.vue set filetype=vue
+autocmd FileType coffee,html,css,xml,yaml,json,javascript,vue setlocal ts=2 sw=2 sts=2
 set magic
 set autoindent
 set smartindent
@@ -182,6 +187,7 @@ let g:syntastic_mode_map = { 'mode': 'active',
     \ 'active_filetypes': ['sh', 'xml'],
     \ 'passive_filetypes': ['java', 'go']  }
 let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
+let g:syntastic_javascript_checkers = ['eslint']
 " END CONFIG FOR SYNTAX CHECKING
 
 
