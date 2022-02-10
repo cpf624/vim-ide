@@ -36,7 +36,7 @@ centos)
 ;;
 macosx)
     # brew install ctags
-    brew install git ack vim --with-lua
+    brew install git ack vim
 ;;
 esac
 
